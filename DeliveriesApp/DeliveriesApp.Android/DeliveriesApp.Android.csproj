@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="DeliveredFragment.cs" />
     <Compile Include="DeliveriesFragment.cs" />
+    <Compile Include="DeliveryAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NewDeliveryActivity.cs" />
     <Compile Include="ProfileFragment.cs" />
@@ -113,6 +114,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\NewDelivery.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DeliveryCell.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

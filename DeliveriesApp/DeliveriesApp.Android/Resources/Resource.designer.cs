@@ -89,44 +89,50 @@ namespace DeliveriesApp.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090008
-			public const int SaveButton = 2131296264;
-			
-			// aapt resource value: 0x7f09000c
-			public const int confirmPasswordEditText = 2131296268;
-			
-			// aapt resource value: 0x7f090003
-			public const int emailEditText = 2131296259;
+			// aapt resource value: 0x7f09000a
+			public const int SaveButton = 2131296266;
 			
 			// aapt resource value: 0x7f09000e
-			public const int fragmentContainer = 2131296270;
+			public const int confirmPasswordEditText = 2131296270;
 			
-			// aapt resource value: 0x7f090011
-			public const int menu_add = 2131296273;
-			
-			// aapt resource value: 0x7f090007
-			public const int packageNameEditText = 2131296263;
+			// aapt resource value: 0x7f090003
+			public const int deliveryNameTextView = 2131296259;
 			
 			// aapt resource value: 0x7f090004
-			public const int passwordEditText = 2131296260;
-			
-			// aapt resource value: 0x7f090006
-			public const int registerButton = 2131296262;
-			
-			// aapt resource value: 0x7f09000a
-			public const int registerEmailEditText = 2131296266;
-			
-			// aapt resource value: 0x7f09000b
-			public const int registerPasswordEditText = 2131296267;
-			
-			// aapt resource value: 0x7f09000d
-			public const int registerUserButton = 2131296269;
+			public const int deliveryStatusTextView = 2131296260;
 			
 			// aapt resource value: 0x7f090005
-			public const int signinButton = 2131296261;
+			public const int emailEditText = 2131296261;
+			
+			// aapt resource value: 0x7f090010
+			public const int fragmentContainer = 2131296272;
+			
+			// aapt resource value: 0x7f090013
+			public const int menu_add = 2131296275;
 			
 			// aapt resource value: 0x7f090009
-			public const int textView1 = 2131296265;
+			public const int packageNameEditText = 2131296265;
+			
+			// aapt resource value: 0x7f090006
+			public const int passwordEditText = 2131296262;
+			
+			// aapt resource value: 0x7f090008
+			public const int registerButton = 2131296264;
+			
+			// aapt resource value: 0x7f09000c
+			public const int registerEmailEditText = 2131296268;
+			
+			// aapt resource value: 0x7f09000d
+			public const int registerPasswordEditText = 2131296269;
+			
+			// aapt resource value: 0x7f09000f
+			public const int registerUserButton = 2131296271;
+			
+			// aapt resource value: 0x7f090007
+			public const int signinButton = 2131296263;
+			
+			// aapt resource value: 0x7f09000b
+			public const int textView1 = 2131296267;
 			
 			// aapt resource value: 0x7f090001
 			public const int textView2 = 2131296257;
@@ -134,11 +140,11 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f090002
 			public const int textView3 = 2131296258;
 			
-			// aapt resource value: 0x7f090010
-			public const int toolbar = 2131296272;
+			// aapt resource value: 0x7f090012
+			public const int toolbar = 2131296274;
 			
-			// aapt resource value: 0x7f09000f
-			public const int toolbar_bottom = 2131296271;
+			// aapt resource value: 0x7f090011
+			public const int toolbar_bottom = 2131296273;
 			
 			// aapt resource value: 0x7f090000
 			public const int webview = 2131296256;
@@ -166,22 +172,25 @@ namespace DeliveriesApp.Droid
 			public const int Deliveries = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int Main = 2130968579;
+			public const int DeliveryCell = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int NewDelivery = 2130968580;
+			public const int Main = 2130968580;
 			
 			// aapt resource value: 0x7f040005
-			public const int Profile = 2130968581;
+			public const int NewDelivery = 2130968581;
 			
 			// aapt resource value: 0x7f040006
-			public const int Register = 2130968582;
+			public const int Profile = 2130968582;
 			
 			// aapt resource value: 0x7f040007
-			public const int Tabs = 2130968583;
+			public const int Register = 2130968583;
 			
 			// aapt resource value: 0x7f040008
-			public const int toolbar = 2130968584;
+			public const int Tabs = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int toolbar = 2130968585;
 			
 			static Layout()
 			{
