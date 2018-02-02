@@ -82,7 +82,7 @@ namespace DeliveriesApp.Droid
 
             if (locationManager.IsProviderEnabled(provider))
             {
-                locationManager.RequestLocationUpdates(provider, 5000, 1000, this);
+                locationManager.RequestLocationUpdates(provider, 5000, 1, this);
             }
         }
 
