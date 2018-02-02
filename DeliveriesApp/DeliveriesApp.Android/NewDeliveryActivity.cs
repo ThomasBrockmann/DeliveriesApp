@@ -21,7 +21,7 @@ namespace DeliveriesApp.Droid
     {
         Button SaveButton;
         EditText packageNameEditText;
-        MapFragment mapFragment;
+        MapFragment mapFragment, destinationMapFragment;
         double latitude;
         double longitude;
         LocationManager locationManager;
@@ -31,6 +31,7 @@ namespace DeliveriesApp.Droid
             latitude = location.Latitude;
             longitude = location.Longitude;
             mapFragment.GetMapAsync(this);
+            destinationMapFragment.GetMapAsync(this);
         }
 
         public void OnMapReady(GoogleMap googleMap)
@@ -39,6 +40,7 @@ namespace DeliveriesApp.Droid
             marker.SetPosition(new LatLng(latitude, longitude));
             marker.SetTitle("Your location");
             googleMap.AddMarker(marker);
+            googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(latitude, longitude), 10));
         }
 
         public void OnProviderDisabled(string provider)
@@ -67,6 +69,7 @@ namespace DeliveriesApp.Droid
             SaveButton = FindViewById<Button>(Resource.Id.SaveButton);
             packageNameEditText = FindViewById<EditText>(Resource.Id.packageNameEditText);
             mapFragment = FragmentManager.FindFragmentById<MapFragment>(Resource.Id.mapFragment);
+            destinationMapFragment = FragmentManager.FindFragmentById<MapFragment>(Resource.Id.destinationMapFragment);
             //mapFragment.GetMapAsync(this);
 
             SaveButton.Click += SaveButton_Click;
@@ -84,6 +87,13 @@ namespace DeliveriesApp.Droid
             {
                 locationManager.RequestLocationUpdates(provider, 5000, 1, this);
             }
+
+            var location = locationManager.GetLastKnownLocation(LocationManager.NetworkProvider);
+            latitude = location.Latitude;
+            longitude = location.Longitude;
+            mapFragment.GetMapAsync(this);
+            destinationMapFragment.GetMapAsync(this);
+
         }
 
         protected override void OnPause()
@@ -94,9 +104,17 @@ namespace DeliveriesApp.Droid
 
         private async void SaveButton_Click(object sender, EventArgs e)
         {
-            Delivery delivery = new Delivery();
-            delivery.Name = packageNameEditText.Text;
-            delivery.Status = 0;
+            var originLocation = mapFragment.Map.CameraPosition.Target;
+            var destinationLocation = destinationMapFragment.Map.CameraPosition.Target;
+            Delivery delivery = new Delivery()
+            {
+                Name = packageNameEditText.Text,
+                Status = 0,
+                OriginLatitude = originLocation.Latitude,
+                OriginLongitude = originLocation.Longitude,
+                DestinationLatitude = destinationLocation.Latitude,
+                DestinationLongitude = destinationLocation.Longitude
+            };
             await Delivery.InsertDelivery(delivery);
         }
     }

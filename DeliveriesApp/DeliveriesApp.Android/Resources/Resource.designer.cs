@@ -372,8 +372,8 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f0b000a
 			public const int auto = 2131427338;
 			
-			// aapt resource value: 0x7f0b001c
-			public const int confirmPasswordEditText = 2131427356;
+			// aapt resource value: 0x7f0b001d
+			public const int confirmPasswordEditText = 2131427357;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int dark = 2131427339;
@@ -384,11 +384,14 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f0b0011
 			public const int deliveryStatusTextView = 2131427345;
 			
+			// aapt resource value: 0x7f0b001a
+			public const int destinationMapFragment = 2131427354;
+			
 			// aapt resource value: 0x7f0b0012
 			public const int emailEditText = 2131427346;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int fragmentContainer = 2131427358;
+			// aapt resource value: 0x7f0b001f
+			public const int fragmentContainer = 2131427359;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int hybrid = 2131427328;
@@ -402,8 +405,8 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f0b0019
 			public const int mapFragment = 2131427353;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int menu_add = 2131427361;
+			// aapt resource value: 0x7f0b0022
+			public const int menu_add = 2131427362;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int none = 2131427329;
@@ -420,14 +423,14 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f0b0015
 			public const int registerButton = 2131427349;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int registerEmailEditText = 2131427354;
-			
 			// aapt resource value: 0x7f0b001b
-			public const int registerPasswordEditText = 2131427355;
+			public const int registerEmailEditText = 2131427355;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int registerUserButton = 2131427357;
+			// aapt resource value: 0x7f0b001c
+			public const int registerPasswordEditText = 2131427356;
+			
+			// aapt resource value: 0x7f0b001e
+			public const int registerUserButton = 2131427358;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int satellite = 2131427331;
@@ -450,11 +453,11 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f0b000f
 			public const int textView3 = 2131427343;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int toolbar = 2131427360;
+			// aapt resource value: 0x7f0b0021
+			public const int toolbar = 2131427361;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int toolbar_bottom = 2131427359;
+			// aapt resource value: 0x7f0b0020
+			public const int toolbar_bottom = 2131427360;
 			
 			// aapt resource value: 0x7f0b000d
 			public const int webview = 2131427341;

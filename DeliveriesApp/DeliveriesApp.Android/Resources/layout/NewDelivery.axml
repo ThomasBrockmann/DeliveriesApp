@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/SaveButton" />
     <TextView
-        android:text="Locate Package Origin"
+        android:text="Locate package origin:"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,6 +22,17 @@
     <fragment
         class="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:id="@+id/mapFragment" />
+    <TextView
+        android:text="Locate package destination"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <fragment
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/destinationMapFragment" />
 </LinearLayout>
