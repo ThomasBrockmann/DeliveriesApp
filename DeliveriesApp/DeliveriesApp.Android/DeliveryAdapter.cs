@@ -56,14 +56,13 @@ namespace DeliveriesApp.Droid
                 view.Tag = holder;
             }
 
-
             //fill in your items
             var delivery = deliveries[position];
             holder.Name.Text = delivery.Name;
             switch (delivery.Status)
             {
                 case 0:
-                    holder.Status.Text = "waitung delivery person";
+                    holder.Status.Text = "waitung for delivery person";
                     break;
                 case 1:
                     holder.Status.Text = "beeing delivered";
