@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Maps;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -14,10 +15,16 @@ using DeliveriesApp.Model;
 namespace DeliveriesApp.Droid
 {
     [Activity(Label = "NewDeliveryActivity")]
-    public class NewDeliveryActivity : Activity
+    public class NewDeliveryActivity : Activity, IOnMapReadyCallback
     {
         Button SaveButton;
         EditText packageNameEditText;
+        MapFragment mapFragment;
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            
+        }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,6 +36,9 @@ namespace DeliveriesApp.Droid
 
             SaveButton = FindViewById<Button>(Resource.Id.SaveButton);
             packageNameEditText = FindViewById<EditText>(Resource.Id.packageNameEditText);
+            mapFragment = FragmentManager.FindFragmentById<MapFragment>(Resource.Id.mapFragment);
+            mapFragment.GetMapAsync(this);
+
             SaveButton.Click += SaveButton_Click;
         }
 
