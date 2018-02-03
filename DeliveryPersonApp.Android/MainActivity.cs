@@ -2,10 +2,9 @@
 using Android.Widget;
 using Android.OS;
 using Android.Content;
-using Microsoft.WindowsAzure.MobileServices;
 using DeliveriesApp.Model;
 
-namespace DeliveriesApp.Droid
+namespace DeliveryPersonApp.Android
 {
     [Activity(Label = "DeliveriesApp", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
@@ -52,4 +51,5 @@ namespace DeliveriesApp.Droid
         }
     }
 }
+
 

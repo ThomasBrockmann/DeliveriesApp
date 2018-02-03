@@ -88,7 +88,7 @@ namespace DeliveriesApp.Droid
                 locationManager.RequestLocationUpdates(provider, 5000, 1, this);
             }
 
-            var location = locationManager.GetLastKnownLocation(LocationManager.NetworkProvider);
+            Location location = locationManager.GetLastKnownLocation(LocationManager.NetworkProvider);
             latitude = location.Latitude;
             longitude = location.Longitude;
             mapFragment.GetMapAsync(this);
