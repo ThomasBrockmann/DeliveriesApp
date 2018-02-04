@@ -89,38 +89,44 @@ namespace DeliveryPersonApp.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070009
-			public const int confirmPasswordEditText = 2131165193;
-			
-			// aapt resource value: 0x7f070001
-			public const int deliverMapFragment = 2131165185;
+			// aapt resource value: 0x7f07000b
+			public const int confirmPasswordEditText = 2131165195;
 			
 			// aapt resource value: 0x7f070002
-			public const int emailEditText = 2131165186;
+			public const int deliverMapFragment = 2131165186;
 			
-			// aapt resource value: 0x7f07000b
-			public const int fragmentContainer = 2131165195;
+			// aapt resource value: 0x7f070001
+			public const int deliverdButton = 2131165185;
 			
 			// aapt resource value: 0x7f070003
-			public const int passwordEditText = 2131165187;
+			public const int emailEditText = 2131165187;
 			
-			// aapt resource value: 0x7f070006
-			public const int pickupMapFragment = 2131165190;
-			
-			// aapt resource value: 0x7f070005
-			public const int registerButton = 2131165189;
-			
-			// aapt resource value: 0x7f070007
-			public const int registerEmailEditText = 2131165191;
-			
-			// aapt resource value: 0x7f070008
-			public const int registerPasswordEditText = 2131165192;
-			
-			// aapt resource value: 0x7f07000a
-			public const int registerUserButton = 2131165194;
+			// aapt resource value: 0x7f07000d
+			public const int fragmentContainer = 2131165197;
 			
 			// aapt resource value: 0x7f070004
-			public const int signinButton = 2131165188;
+			public const int passwordEditText = 2131165188;
+			
+			// aapt resource value: 0x7f070007
+			public const int pickUpButton = 2131165191;
+			
+			// aapt resource value: 0x7f070008
+			public const int pickupMapFragment = 2131165192;
+			
+			// aapt resource value: 0x7f070006
+			public const int registerButton = 2131165190;
+			
+			// aapt resource value: 0x7f070009
+			public const int registerEmailEditText = 2131165193;
+			
+			// aapt resource value: 0x7f07000a
+			public const int registerPasswordEditText = 2131165194;
+			
+			// aapt resource value: 0x7f07000c
+			public const int registerUserButton = 2131165196;
+			
+			// aapt resource value: 0x7f070005
+			public const int signinButton = 2131165189;
 			
 			// aapt resource value: 0x7f070000
 			public const int webview = 2131165184;

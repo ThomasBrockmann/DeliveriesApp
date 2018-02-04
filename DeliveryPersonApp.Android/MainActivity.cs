@@ -27,27 +27,27 @@ namespace DeliveryPersonApp.Android
             signinButton.Click += SigninButton_Click;
         }
 
-        private async void SigninButton_Click(object sender, System.EventArgs e)
-        {
-            bool result;
-            result = await User.Login(emailEditText.Text, passwordEditText.Text);
-            if (result)
-            {
-                Intent intent = new Intent(this, typeof(TabsActivity));
-                StartActivity(intent);
-                Finish();
-            }
-            else
-            {
-                Toast.MakeText(this, "Try again later", ToastLength.Long).Show();
-            }
-        }
-
         private void RegisterButton_Click(object sender, System.EventArgs e)
         {
             Intent intent = new Intent(this, typeof(RegisterActivity));
             intent.PutExtra("email", emailEditText.Text);
             StartActivity(intent);
+        }
+
+        private async void SigninButton_Click(object sender, System.EventArgs e)
+        {
+            string personId;
+            personId = await DeliveryPerson.Login(emailEditText.Text, passwordEditText.Text);
+            if (!string.IsNullOrEmpty(personId))
+            {
+                Intent intent = new Intent(this, typeof(TabsActivity));
+                intent.PutExtra("personId", personId);
+                StartActivity(intent);
+            }
+            else
+            {
+                Toast.MakeText(this, "Try again later", ToastLength.Long).Show();
+            }
         }
     }
 }

@@ -17,13 +17,16 @@ namespace DeliveryPersonApp.Android
     public class DeliveringFragment : ListFragment
     {
         List<Delivery> deliveries;
-        public override void OnCreate(Bundle savedInstanceState)
+        public async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
 
             deliveries = new List<Delivery>();
+            string personId = (Activity as TabsActivity).PersonId;
+            deliveries = await Delivery.GetBeeingDelivered(personId);
+            ListAdapter = new ArrayAdapter(Activity, global::Android.Resource.Layout.SimpleListItem1, deliveries);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -43,6 +46,7 @@ namespace DeliveryPersonApp.Android
             Intent intent = new Intent(Activity, typeof(DeliverActivity));
             intent.PutExtra("latitude", selectedDelivery.DestinationLatitude);
             intent.PutExtra("longitude", selectedDelivery.DestinationLongitude);
+            intent.PutExtra("deliveryId", selectedDelivery.Id);
             StartActivity(intent);
         }
     }

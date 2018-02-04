@@ -15,6 +15,13 @@ namespace DeliveryPersonApp.Android
     [Activity(Label = "TabsActivity")]
     public class TabsActivity : Activity
     {
+        private string personId;
+
+        public string PersonId
+        {
+            get { return personId; }
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,6 +34,7 @@ namespace DeliveryPersonApp.Android
             AddTab("Waiting", 0, new WaitingFragment());
             AddTab("Delivered", 0, new DeliveredFragment());
 
+            personId = Intent.GetStringExtra("personId");
         }
 
 

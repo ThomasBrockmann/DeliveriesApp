@@ -17,12 +17,14 @@ namespace DeliveryPersonApp.Android
     public class WaitingFragment : ListFragment
     {
         List<Delivery> deliveries;
-        public override void OnCreate(Bundle savedInstanceState)
+        public async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
-            deliveries = new List<Delivery>();
+            string personId = (Activity as TabsActivity).PersonId;
+            deliveries = await Delivery.GetWaiting();
+            ListAdapter = new ArrayAdapter(Activity, global::Android.Resource.Layout.SimpleListItem1, deliveries);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -39,9 +41,11 @@ namespace DeliveryPersonApp.Android
 
             Delivery selectedDelivery = deliveries[position];
 
-            Intent intent = new Intent(Activity, typeof(DeliverActivity));
-            intent.PutExtra("latitude", selectedDelivery.OriginLatitude);
-            intent.PutExtra("longitude", selectedDelivery.OriginLongitude);
+            Intent intent = new Intent(Activity, typeof(PickUpActivity));
+            intent.PutExtra("latitude", selectedDelivery.DestinationLatitude);
+            intent.PutExtra("longitude", selectedDelivery.DestinationLongitude);
+            intent.PutExtra("personId", (Activity as TabsActivity).PersonId);
+            intent.PutExtra("deliveryId", selectedDelivery.Id);
             StartActivity(intent);
         }
 

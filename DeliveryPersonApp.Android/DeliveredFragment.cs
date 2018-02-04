@@ -16,13 +16,16 @@ namespace DeliveryPersonApp.Android
 {
     public class DeliveredFragment : ListFragment
     {
+        List<Delivery> deliveries;
         public async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
-            var delivered = await Delivery.GetDelivered();
-            //ListAdapter = new DeliveryAdapter(Activity, delivered);
+            deliveries = new List<Delivery>();
+            string personId = (Activity as TabsActivity).PersonId;
+            deliveries = await Delivery.GetDelivered(personId);
+            ListAdapter = new ArrayAdapter(Activity, global::Android.Resource.Layout.SimpleListItem1, deliveries);
 
         }
 
