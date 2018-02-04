@@ -11,7 +11,7 @@
   <uses-permission android:name="deliverypersonapp.android.permission.MAPS_RECEIVE" />
   <permission android:name="deliverypersonapp.android.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
   <application android:label="Deliveries">
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCSc7NqKHFAWnWi_2vMpEGA_L4J4pKWdYc" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCkePXcH1h44W1cSThYdKUCmODjok2T300" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
   </application>
 </manifest>

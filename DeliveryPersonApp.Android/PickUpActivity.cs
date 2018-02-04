@@ -6,6 +6,7 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Gms.Maps;
+using Android.Gms.Maps.Model;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -15,13 +16,23 @@ using DeliveriesApp.Model;
 namespace DeliveryPersonApp.Android
 {
     [Activity(Label = "PickUpActivity")]
-    public class PickUpActivity : Activity
+    public class PickUpActivity : Activity, IOnMapReadyCallback
 
     {
         MapFragment mapFragment;
         Button pickUpButton;
         double lat, lng;
         string personId, deliveryId;
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            MarkerOptions marker = new MarkerOptions();
+            marker.SetPosition(new LatLng(lat, lng));
+            marker.SetTitle("Pick up here");
+            googleMap.AddMarker(marker);
+
+            googleMap.MoveCamera(CameraUpdateFactory.NewLatLngZoom(new LatLng(lat, lng), 12));
+        }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -39,6 +50,7 @@ namespace DeliveryPersonApp.Android
             personId = Intent.GetStringExtra("personId");
             deliveryId = Intent.GetStringExtra("deliveryId");
 
+            mapFragment.GetMapAsync(this);
         }
 
         private async void PickUpButton_Click(object sender, EventArgs e)
