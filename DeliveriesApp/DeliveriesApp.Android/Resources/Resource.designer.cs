@@ -76,6 +76,9 @@ namespace DeliveriesApp.Droid
 			// aapt resource value: 0x7f020000
 			public const int ic_arrow_back = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int web_hi_res_512 = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -244,6 +247,9 @@ namespace DeliveriesApp.Droid
 			
 			// aapt resource value: 0x7f030005
 			public const int Icon = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int truck_blue = 2130903046;
 			
 			static Mipmap()
 			{
