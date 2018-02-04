@@ -38,10 +38,10 @@ namespace DeliveryPersonApp.Android
         private async void RegisterUserButton_Click(object sender, EventArgs e)
         {
             bool result;
-            result = await User.Register(registerEmailEditText.Text, registerPasswordEditText.Text, confirmPasswordEditText.Text);
+            result = await DeliveryPerson.Register(registerEmailEditText.Text, registerPasswordEditText.Text, confirmPasswordEditText.Text);
             if (result)
             {
-                Toast.MakeText(this, "User created.", ToastLength.Long).Show();
+                Toast.MakeText(this, "Person created.", ToastLength.Long).Show();
             }
             else
             {

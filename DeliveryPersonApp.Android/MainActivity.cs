@@ -42,11 +42,12 @@ namespace DeliveryPersonApp.Android
             {
                 Intent intent = new Intent(this, typeof(TabsActivity));
                 intent.PutExtra("personId", personId);
+                Toast.MakeText(this, "Person: " + personId, ToastLength.Long).Show();
                 StartActivity(intent);
             }
             else
             {
-                Toast.MakeText(this, "Try again later", ToastLength.Long).Show();
+                Toast.MakeText(this, "no Person found.", ToastLength.Long).Show();
             }
         }
     }
