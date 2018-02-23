@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace DeliveriesApp.Droid
 {
-    [Activity(Label = "TabsActivity")]
+    [Activity(Label = "Overview Deliveries")]
     public class TabsActivity : Activity
     {
         Toolbar tabsToolbar;

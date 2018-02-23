@@ -16,7 +16,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveriesApp.Droid
 {
-    [Activity(Label = "NewDeliveryActivity")]
+    [Activity(Label = "New Delivery")]
     public class NewDeliveryActivity : Activity, IOnMapReadyCallback, ILocationListener
     {
         Button SaveButton;
@@ -116,6 +116,7 @@ namespace DeliveriesApp.Droid
                 DestinationLongitude = destinationLocation.Longitude
             };
             await Delivery.InsertDelivery(delivery);
+            Finish();
         }
     }
 }

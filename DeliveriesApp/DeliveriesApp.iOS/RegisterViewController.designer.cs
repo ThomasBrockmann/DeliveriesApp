@@ -7,14 +7,16 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace DeliveriesApp.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("RegisterViewController")]
+    partial class RegisterViewController
     {
         [Outlet]
-        UIKit.UIButton Button { get; set; }
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField confirmpasswordTextField { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,12 +30,13 @@ namespace DeliveriesApp.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton registerButton { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton signInButton { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
+            if (confirmpasswordTextField != null) {
+                confirmpasswordTextField.Dispose ();
+                confirmpasswordTextField = null;
+            }
+
             if (emailTextField != null) {
                 emailTextField.Dispose ();
                 emailTextField = null;
@@ -47,11 +50,6 @@ namespace DeliveriesApp.iOS
             if (registerButton != null) {
                 registerButton.Dispose ();
                 registerButton = null;
-            }
-
-            if (signInButton != null) {
-                signInButton.Dispose ();
-                signInButton = null;
             }
         }
     }

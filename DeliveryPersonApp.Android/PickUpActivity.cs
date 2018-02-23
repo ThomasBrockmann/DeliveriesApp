@@ -15,7 +15,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveryPersonApp.Android
 {
-    [Activity(Label = "PickUpActivity")]
+    [Activity(Label = "Report Pick Up")]
     public class PickUpActivity : Activity, IOnMapReadyCallback
 
     {
@@ -56,6 +56,7 @@ namespace DeliveryPersonApp.Android
         private async void PickUpButton_Click(object sender, EventArgs e)
         {
             await Delivery.MarkAsPickedUp(deliveryId, personId);
+            Finish();
         }
     }
 }

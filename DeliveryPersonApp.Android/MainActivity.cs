@@ -6,7 +6,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveryPersonApp.Android
 {
-    [Activity(Label = "DeliveriesApp", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Delivery Person", MainLauncher = true, Icon = "@mipmap/truck_green")]
     public class MainActivity : Activity
     {
         EditText emailEditText, passwordEditText;

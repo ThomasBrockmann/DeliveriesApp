@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace DeliveryPersonApp.Android
 {
-    [Activity(Label = "TabsActivity")]
+    [Activity(Label = "Overview Deliveries")]
     public class TabsActivity : Activity
     {
         private string personId;

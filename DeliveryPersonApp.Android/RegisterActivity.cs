@@ -13,7 +13,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveryPersonApp.Android
 {
-    [Activity(Label = "RegisterActivity")]
+    [Activity(Label = "Register Person")]
     public class RegisterActivity : Activity
     {
         EditText registerEmailEditText, registerPasswordEditText, confirmPasswordEditText;

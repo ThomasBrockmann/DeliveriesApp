@@ -13,7 +13,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveriesApp.Droid
 {
-    [Activity(Label = "RegisterActivity")]
+    [Activity(Label = "Register User")]
     public class RegisterActivity : Activity
     {
         EditText registerEmailEditText, registerPasswordEditText, confirmPasswordEditText;
@@ -41,7 +41,11 @@ namespace DeliveriesApp.Droid
             result = await User.Register(registerEmailEditText.Text, registerPasswordEditText.Text, confirmPasswordEditText.Text);
             if (result)
             {
-                Toast.MakeText(this, "User created.", ToastLength.Long).Show();
+                Intent intent = new Intent(this, typeof(MainActivity));
+                intent.PutExtra("returnemail", registerEmailEditText.Text);
+                SetResult(Result.Ok, intent);
+                //Toast.MakeText(this, "User created.", ToastLength.Long).Show();
+                Finish();
             }
             else
             {

@@ -4,10 +4,12 @@ using Android.OS;
 using Android.Content;
 using Microsoft.WindowsAzure.MobileServices;
 using DeliveriesApp.Model;
+using Android.Runtime;
+using Android.Util;
 
 namespace DeliveriesApp.Droid
 {
-    [Activity(Label = "DeliveriesApp", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "DeliveriesApp", MainLauncher = true, Icon = "@mipmap/truck_blue")]
     public class MainActivity : Activity
     {
         EditText emailEditText, passwordEditText;
@@ -34,6 +36,7 @@ namespace DeliveriesApp.Droid
             result = await User.Login(emailEditText.Text, passwordEditText.Text);
             if (result)
             {
+                Log.Info("myApp", "Benutzer angelegt");
                 Intent intent = new Intent(this, typeof(TabsActivity));
                 StartActivity(intent);
                 Finish();
@@ -48,7 +51,22 @@ namespace DeliveriesApp.Droid
         {
             Intent intent = new Intent(this, typeof(RegisterActivity));
             intent.PutExtra("email", emailEditText.Text);
-            StartActivity(intent);
+            StartActivityForResult(intent, 1);
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            if (resultCode == Result.Ok)
+            {
+                string eMail = data.GetStringExtra("returnemail");
+                if (!string.IsNullOrEmpty(eMail))
+                {
+                    Log.Info("OnActivityResult", "Alles gut" + eMail);
+                    emailEditText.Text = eMail;
+                }
+                else Log.Info("OnActivityResult", "Uebergabe leer oder Null");
+            }
         }
     }
 }

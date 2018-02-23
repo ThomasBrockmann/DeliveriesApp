@@ -15,7 +15,7 @@ using DeliveriesApp.Model;
 
 namespace DeliveryPersonApp.Android
 {
-    [Activity(Label = "DeliverActivity")]
+    [Activity(Label = "Report Delivery")]
     public class DeliverActivity : Activity, IOnMapReadyCallback
     {
         Button deliverButton;
@@ -56,6 +56,7 @@ namespace DeliveryPersonApp.Android
         private async void DeliverButton_Click(object sender, EventArgs e)
         {
             await Delivery.MarkAsDelivered(deliveryId);
+            Finish();
         }
     }
 }
