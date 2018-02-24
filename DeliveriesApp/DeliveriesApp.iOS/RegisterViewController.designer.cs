@@ -20,6 +20,10 @@ namespace DeliveriesApp.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView DerNameVomRegistry { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField emailTextField { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace DeliveriesApp.iOS
             if (confirmpasswordTextField != null) {
                 confirmpasswordTextField.Dispose ();
                 confirmpasswordTextField = null;
+            }
+
+            if (DerNameVomRegistry != null) {
+                DerNameVomRegistry.Dispose ();
+                DerNameVomRegistry = null;
             }
 
             if (emailTextField != null) {

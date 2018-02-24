@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Foundation;
 using UIKit;
 
 namespace DeliveriesApp.iOS
@@ -16,6 +16,17 @@ namespace DeliveriesApp.iOS
 
             // Perform any additional setup after loading the view, typically from a nib.
 
+        }
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            if(segue.Identifier == "registerSegue")
+            {
+                var destinatioViewController = segue.DestinationViewController as RegisterViewController;
+                destinatioViewController.emailAddress = emailTextField.Text;
+            }
         }
 
         public override void DidReceiveMemoryWarning()

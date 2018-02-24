@@ -18,6 +18,10 @@ namespace DeliveriesApp.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView DerName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField emailTextField { get; set; }
 
         [Outlet]
@@ -34,6 +38,11 @@ namespace DeliveriesApp.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (DerName != null) {
+                DerName.Dispose ();
+                DerName = null;
+            }
+
             if (emailTextField != null) {
                 emailTextField.Dispose ();
                 emailTextField = null;
