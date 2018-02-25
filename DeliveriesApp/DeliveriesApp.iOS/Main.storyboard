@@ -198,29 +198,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6023" style="IBUITableViewCellStyleSubtitle" textLabel="8187" detailTextLabel="8188" reuseIdentifier="deliveryCell">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6023" reuseIdentifier="deliveryCell" customClass="DeliveryTableViewCell" rowHeight="80">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6023" id="6024">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8187">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9441" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="10" y="8" width="49.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8188">
-                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9442" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="10" y="36.5" width="45" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                            <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinates" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9443" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="79.5" y="18" width="285.5" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" colorSpace="calibratedRGB" red="0" green="0.50196078431372548" blue="0" alpha="1"/>
+                                            <color key="highlightedColor" colorSpace="calibratedRGB" red="0" green="0" blue="0" alpha="1"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint id="9498" firstItem="9441" firstAttribute="leading" secondItem="6024" secondAttribute="leading" constant="10"/>
+                                        <constraint id="9499" firstItem="9441" firstAttribute="top" secondItem="6024" secondAttribute="top" constant="8"/>
+                                        <constraint id="9500" firstItem="9442" firstAttribute="leading" secondItem="6024" secondAttribute="leading" constant="10"/>
+                                        <constraint id="9501" firstItem="9442" firstAttribute="top" secondItem="9441" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="9502" firstItem="9443" firstAttribute="leading" secondItem="9441" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="9503" firstItem="9443" firstAttribute="leading" secondItem="9442" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="9504" firstItem="6024" firstAttribute="trailing" secondItem="9443" secondAttribute="trailing" constant="10"/>
+                                        <constraint id="9505" firstItem="9443" firstAttribute="top" secondItem="6024" secondAttribute="top" constant="18"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="statusLabel" destination="9442" id="name-outlet-9442"/>
+                                    <outlet property="coordinatesLabel" destination="9443" id="name-outlet-9443"/>
+                                    <outlet property="nameLabel" destination="9441" id="name-outlet-9441"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -12,7 +12,7 @@ namespace DeliveriesApp.iOS
         public DeliveriesViewController (IntPtr handle) : base (handle)
         {
         }
-        public async override void ViewDidLoad()
+        public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
@@ -35,23 +35,29 @@ namespace DeliveriesApp.iOS
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            var cell = tableView.DequeueReusableCell("deliveryCell");
+            var cell = tableView.DequeueReusableCell("deliveryCell") as DeliveryTableViewCell;
 
             var delivery = deliveries[indexPath.Row];
-            cell.TextLabel.Text = delivery.Name;
+            cell.nameLabel.Text = delivery.Name;
+            cell.coordinatesLabel.Text = $"{delivery.DestinationLatitude},{delivery.DestinationLongitude}";
             switch (delivery.Status)
             {
                 case 0:
-                    cell.DetailTextLabel.Text = "Waiting delivery person";
+                    cell.statusLabel.Text = "Waiting delivery person";
                     break;
                 case 1:
-                    cell.DetailTextLabel.Text = "In delivery";
+                    cell.statusLabel.Text = "In delivery";
                     break;
                 case 2:
-                    cell.DetailTextLabel.Text = "delivered";
+                    cell.statusLabel.Text = "delivered";
                     break;
             }
             return cell;
+        }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return 60;
         }
     }
 }
