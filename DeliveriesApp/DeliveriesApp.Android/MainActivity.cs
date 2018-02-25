@@ -36,7 +36,7 @@ namespace DeliveriesApp.Droid
             result = await User.Login(emailEditText.Text, passwordEditText.Text);
             if (result)
             {
-                Log.Info("myApp", "Benutzer angelegt");
+                Log.Info("myApp", "Benutzer angemeldet");
                 Intent intent = new Intent(this, typeof(TabsActivity));
                 StartActivity(intent);
                 Finish();

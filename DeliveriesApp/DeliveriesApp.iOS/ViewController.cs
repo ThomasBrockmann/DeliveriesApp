@@ -1,4 +1,5 @@
 ﻿using System;
+using DeliveriesApp.Model;
 using Foundation;
 using UIKit;
 
@@ -16,6 +17,30 @@ namespace DeliveriesApp.iOS
 
             // Perform any additional setup after loading the view, typically from a nib.
 
+            signInButton.TouchUpInside += SignInButton_TouchUpInside;
+
+        }
+
+        private async void SignInButton_TouchUpInside(object sender, EventArgs e)
+        {
+            bool result;
+            result = await User.Login(emailTextField.Text, passwordTextField.Text);
+            if (result)
+            {
+                var alert = UIAlertController.Create("Success", "You are logged in!!!", UIAlertControllerStyle.Alert);
+                alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+                PresentViewController(alert, true, null);
+
+                //Intent intent = new Intent(this, typeof(TabsActivity));
+                //StartActivity(intent);
+                //Finish();
+            }
+            else
+            {
+                var alert = UIAlertController.Create("Error", "Log in not successful", UIAlertControllerStyle.Alert);
+                alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+                PresentViewController(alert, true, null);
+            }
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -35,13 +60,5 @@ namespace DeliveriesApp.iOS
             // Release any cached data, images, etc that aren't in use.		
         }
 
-        partial void SignInButton_TouchUpInside(UIButton sender)
-        {
-            var alert = UIAlertController.Create("Greetings", "Hello!", UIAlertControllerStyle.Alert);
-            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-            alert.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
-            PresentViewController(alert, true, null);
-            return;
-        }
     }
 }
