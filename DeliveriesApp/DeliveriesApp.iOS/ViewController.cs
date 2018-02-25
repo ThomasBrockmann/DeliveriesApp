@@ -7,6 +7,7 @@ namespace DeliveriesApp.iOS
 {
     public partial class ViewController : UIViewController
     {
+        bool hasLoggedIn = false;
         public ViewController(IntPtr handle) : base(handle)
         {
         }
@@ -27,6 +28,9 @@ namespace DeliveriesApp.iOS
             result = await User.Login(emailTextField.Text, passwordTextField.Text);
             if (result)
             {
+                hasLoggedIn = true;
+                PerformSegue("loginSegue", this);
+
                 var alert = UIAlertController.Create("Success", "You are logged in!!!", UIAlertControllerStyle.Alert);
                 alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
                 PresentViewController(alert, true, null);
@@ -37,10 +41,12 @@ namespace DeliveriesApp.iOS
             }
             else
             {
+                hasLoggedIn = false;
                 var alert = UIAlertController.Create("Error", "Log in not successful", UIAlertControllerStyle.Alert);
                 alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
                 PresentViewController(alert, true, null);
             }
+
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
@@ -52,6 +58,15 @@ namespace DeliveriesApp.iOS
                 var destinatioViewController = segue.DestinationViewController as RegisterViewController;
                 destinatioViewController.emailAddress = emailTextField.Text;
             }
+        }
+
+        public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
+        {
+            if (segueIdentifier == "loginSegue")
+            {
+                return hasLoggedIn;
+            }
+            return true;
         }
 
         public override void DidReceiveMemoryWarning()
