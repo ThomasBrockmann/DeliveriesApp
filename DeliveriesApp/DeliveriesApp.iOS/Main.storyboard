@@ -167,7 +167,7 @@
         </scene>
         <scene sceneID="4290">
             <objects>
-                <tabBarController id="4291" sceneMemberID="viewController">
+                <tabBarController id="4291" sceneMemberID="viewController" customClass="MainTabBarController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4294">
                         <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
