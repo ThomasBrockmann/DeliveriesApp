@@ -39,7 +39,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
-                                <connections/>
+                                <connections>
+                                    <action selector="SignInButton_TouchUpInside:" destination="BYZ-38-t0r" id="5181" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="229" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="284" y="416" width="57" height="30"/>
@@ -117,6 +119,7 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
+                                <connections/>
                             </button>
                         </subviews>
                         <constraints>

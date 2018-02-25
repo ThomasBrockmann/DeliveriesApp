@@ -35,5 +35,13 @@ namespace DeliveriesApp.iOS
             // Release any cached data, images, etc that aren't in use.		
         }
 
+        partial void SignInButton_TouchUpInside(UIButton sender)
+        {
+            var alert = UIAlertController.Create("Greetings", "Hello!", UIAlertControllerStyle.Alert);
+            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+            alert.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
+            PresentViewController(alert, true, null);
+            return;
+        }
     }
 }

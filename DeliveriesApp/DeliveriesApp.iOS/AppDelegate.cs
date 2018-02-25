@@ -10,6 +10,7 @@ namespace DeliveriesApp.iOS
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+        // public static MobileServiceClient MobileService = new MobileServiceClient("https://thbdeliveriesapp.azurewebsites.net");
 
         public override UIWindow Window
         {
@@ -22,6 +23,7 @@ namespace DeliveriesApp.iOS
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
 
+            CurrentPlatform.Init();
             return true;
         }
 
