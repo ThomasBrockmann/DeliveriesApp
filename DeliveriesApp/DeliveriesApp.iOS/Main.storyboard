@@ -178,6 +178,13 @@
                         <segue id="6212" destination="6114" kind="relationship" relationship="viewControllers"/>
                         <segue id="6491" destination="6217" kind="relationship" relationship="viewControllers"/>
                     </connections>
+                    <navigationItem id="7114" key="navigationItem" title="Tab Navigation">
+                        <barButtonItem key="rightBarButtonItem" id="7115" systemItem="add">
+                            <connections>
+                                <segue id="7164" destination="7110" kind="show"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4295" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,6 +259,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the &quot;Profile&quot; view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8129" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="88.5" y="115" width="185" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="8130" firstItem="8129" firstAttribute="top" secondItem="6218" secondAttribute="top" constant="115"/>
+                            <constraint id="8131" firstItem="6218" firstAttribute="centerX" secondItem="8129" secondAttribute="centerX" constant="6.5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="6490" image="profile.png"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -259,6 +278,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6219" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="917" y="744"/>
+        </scene>
+        <scene sceneID="7109">
+            <objects>
+                <viewController id="7110" sceneMemberID="viewController" customClass="NewDeliveryViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7107"/>
+                        <viewControllerLayoutGuide type="bottom" id="7108"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7111">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7168" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Insert the name of the package">
+                                <rect key="frame" x="16" y="89" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint id="7169" firstItem="7111" firstAttribute="trailingMargin" secondItem="7168" secondAttribute="trailing"/>
+                            <constraint id="7170" firstItem="7168" firstAttribute="leading" secondItem="7111" secondAttribute="leadingMargin"/>
+                            <constraint id="7171" firstItem="7168" firstAttribute="top" secondItem="7111" secondAttribute="top" constant="89"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="New Delivery" id="7166" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" id="7167" systemItem="save"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBarButtonItem" destination="7167" id="name-outlet-7167"/>
+                        <outlet property="packeNameTextField" destination="7168" id="name-outlet-7168"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7112" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="744"/>
         </scene>
     </scenes>
     <resources>

@@ -142,6 +142,14 @@
     <Compile Include="MainTabBarController.designer.cs">
       <DependentUpon>MainTabBarController.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewDelivery.cs" />
+    <Compile Include="NewDelivery.designer.cs">
+      <DependentUpon>NewDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDeliveryViewController.cs" />
+    <Compile Include="NewDeliveryViewController.designer.cs">
+      <DependentUpon>NewDeliveryViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProfileViewController.cs" />
     <Compile Include="ProfileViewController.designer.cs">
       <DependentUpon>ProfileViewController.cs</DependentUpon>
