@@ -7,11 +7,12 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace DerliveryPersonApp.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("DeliveredTableViewController")]
+    partial class DeliveredTableViewController
     {
         void ReleaseDesignerOutlets ()
         {

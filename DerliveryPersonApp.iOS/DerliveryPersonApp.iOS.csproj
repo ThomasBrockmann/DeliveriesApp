@@ -59,13 +59,44 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DeliveredTableViewController.cs" />
+    <Compile Include="DeliveredTableViewController.designer.cs">
+      <DependentUpon>DeliveredTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveringTableViewController.cs" />
+    <Compile Include="DeliveringTableViewController.designer.cs">
+      <DependentUpon>DeliveringTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliverViewController.cs" />
+    <Compile Include="DeliverViewController.designer.cs">
+      <DependentUpon>DeliverViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <None Include="GettingStarted.Xamarin" />
+    <Compile Include="PickUpViewController.cs" />
+    <Compile Include="PickUpViewController.designer.cs">
+      <DependentUpon>PickUpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitingTableViewController.cs" />
+    <Compile Include="WaitingTableViewController.designer.cs">
+      <DependentUpon>WaitingTableViewController.cs</DependentUpon>
+    </Compile>
     <None Include="Info.plist" />
+    <Compile Include="MainTabBarController.cs" />
+    <Compile Include="MainTabBarController.designer.cs">
+      <DependentUpon>MainTabBarController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RegisterViewController.cs" />
+    <Compile Include="RegisterViewController.designer.cs">
+      <DependentUpon>RegisterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabBar.cs" />
+    <Compile Include="TabBar.designer.cs">
+      <DependentUpon>TabBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
