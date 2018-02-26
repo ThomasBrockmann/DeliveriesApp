@@ -14,8 +14,16 @@ namespace DerliveryPersonApp.iOS
     [Register ("DeliverViewController")]
     partial class DeliverViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.NSLayoutConstraint deliveryMapView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (deliveryMapView != null) {
+                deliveryMapView.Dispose ();
+                deliveryMapView = null;
+            }
         }
     }
 }

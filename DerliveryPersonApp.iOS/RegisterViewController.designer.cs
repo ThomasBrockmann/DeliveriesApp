@@ -14,5 +14,25 @@ namespace DerliveryPersonApp.iOS
     [Register ("RegisterViewController")]
     partial class RegisterViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField confirmPasswordTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField emailTextField { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (confirmPasswordTextField != null) {
+                confirmPasswordTextField.Dispose ();
+                confirmPasswordTextField = null;
+            }
+
+            if (emailTextField != null) {
+                emailTextField.Dispose ();
+                emailTextField = null;
+            }
+        }
     }
 }

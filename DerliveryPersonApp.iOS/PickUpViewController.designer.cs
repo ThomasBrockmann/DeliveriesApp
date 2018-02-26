@@ -14,8 +14,16 @@ namespace DerliveryPersonApp.iOS
     [Register ("PickUpViewController")]
     partial class PickUpViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        MapKit.MKMapView pickUpMapView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (pickUpMapView != null) {
+                pickUpMapView.Dispose ();
+                pickUpMapView = null;
+            }
         }
     }
 }
