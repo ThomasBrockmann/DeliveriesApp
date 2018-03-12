@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="739" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your eMail address">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="739" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Enter your eMail address" text="Bote1@tbrockmann.pl">
                                 <rect key="frame" x="20" y="303" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -37,7 +37,7 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="919" destination="366" kind="show"/>
+                                    <segue id="919" destination="366" kind="show" identifier="loginSegue"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="741" translatesAutoresizingMaskIntoConstraints="NO">
@@ -46,7 +46,7 @@
                                     <color key="titleColor" colorSpace="calibratedRGB" red="0" green="0.52549019607843139" blue="1" alpha="1"/>
                                 </state>
                                 <connections>
-                                    <segue id="849" destination="377" kind="show"/>
+                                    <segue id="849" destination="377" kind="show" identifier="registerSegue"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,11 +166,13 @@
                     <connections>
                         <outlet property="emailTextField" destination="921" id="name-outlet-921"/>
                         <outlet property="confirmPasswordTextField" destination="923" id="name-outlet-923"/>
+                        <outlet property="registerButton" destination="925" id="name-outlet-925"/>
+                        <outlet property="passwordTextField" destination="922" id="name-outlet-922"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="379" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-72" y="818"/>
+            <point key="canvasLocation" x="-72" y="823"/>
         </scene>
         <scene sceneID="385">
             <objects>
@@ -218,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="392" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-800"/>
+            <point key="canvasLocation" x="933" y="-798"/>
         </scene>
         <scene sceneID="396">
             <objects>
@@ -311,7 +313,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="414" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="813"/>
+            <point key="canvasLocation" x="935" y="816"/>
         </scene>
         <scene sceneID="418">
             <objects>

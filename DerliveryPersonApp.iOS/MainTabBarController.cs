@@ -6,6 +6,8 @@ namespace DerliveryPersonApp.iOS
 {
     public partial class MainTabBarController : UITabBarController
     {
+        public string userId;
+
         public MainTabBarController (IntPtr handle) : base (handle)
         {
         }

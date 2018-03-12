@@ -17,6 +17,7 @@ namespace DeliveriesApp.Model
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
                 return string.Empty;
             DeliveryPerson deliveryPerson = (await AzureHelper.MobileService.GetTable<DeliveryPerson>().Where(u => u.Email == email).ToListAsync()).FirstOrDefault();
+            if (deliveryPerson == null) return string.Empty;
             if (deliveryPerson.Password == password)
                 return deliveryPerson.Id;
 

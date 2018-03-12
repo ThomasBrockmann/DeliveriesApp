@@ -22,6 +22,14 @@ namespace DerliveryPersonApp.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField emailTextField { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField passwordTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton registerButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (confirmPasswordTextField != null) {
@@ -32,6 +40,16 @@ namespace DerliveryPersonApp.iOS
             if (emailTextField != null) {
                 emailTextField.Dispose ();
                 emailTextField = null;
+            }
+
+            if (passwordTextField != null) {
+                passwordTextField.Dispose ();
+                passwordTextField = null;
+            }
+
+            if (registerButton != null) {
+                registerButton.Dispose ();
+                registerButton = null;
             }
         }
     }
