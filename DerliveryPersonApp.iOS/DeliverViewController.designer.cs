@@ -16,10 +16,19 @@ namespace DerliveryPersonApp.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem deliverBarButtonItem { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.NSLayoutConstraint deliveryMapView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (deliverBarButtonItem != null) {
+                deliverBarButtonItem.Dispose ();
+                deliverBarButtonItem = null;
+            }
+
             if (deliveryMapView != null) {
                 deliveryMapView.Dispose ();
                 deliveryMapView = null;

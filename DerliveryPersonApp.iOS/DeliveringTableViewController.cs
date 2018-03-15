@@ -9,8 +9,38 @@ namespace DerliveryPersonApp.iOS
     public partial class DeliveringTableViewController : UITableViewController
     {
         List<Delivery> deliveries = new List<Delivery>();
+        public string userId;
         public DeliveringTableViewController (IntPtr handle) : base (handle)
         {
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            deliveries = new List<Delivery>(); //                 notwendig ??????????????????????????????????
+        }
+
+        public async override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            deliveries = await Delivery.GetBeeingDelivered(userId);
+            TableView.ReloadData();
+        }
+
+        public override nint RowsInSection(UITableView tableView, nint section)
+        {
+            return deliveries.Count;
+        }
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            var cell = tableView.DequeueReusableCell("deliveringCell");
+            var delivery = deliveries[indexPath.Row];
+            cell.TextLabel.Text = delivery.Name;
+            cell.DetailTextLabel.Text = $"{delivery.DestinationLatitude}, {delivery.DestinationLongitude}";
+            return cell;
         }
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)

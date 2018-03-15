@@ -16,10 +16,19 @@ namespace DerliveryPersonApp.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem pickUpBarButtonItem { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         MapKit.MKMapView pickUpMapView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (pickUpBarButtonItem != null) {
+                pickUpBarButtonItem.Dispose ();
+                pickUpBarButtonItem = null;
+            }
+
             if (pickUpMapView != null) {
                 pickUpMapView.Dispose ();
                 pickUpMapView = null;

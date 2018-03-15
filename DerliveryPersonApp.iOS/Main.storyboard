@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="390" style="IBUITableViewCellStyleSubtitle" textLabel="1131" detailTextLabel="1132">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="390" style="IBUITableViewCellStyleSubtitle" textLabel="1131" detailTextLabel="1132" reuseIdentifier="waitingCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="390" id="391">
@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="401" style="IBUITableViewCellStyleSubtitle" textLabel="1494" detailTextLabel="1495">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="401" style="IBUITableViewCellStyleSubtitle" textLabel="1494" detailTextLabel="1495" reuseIdentifier="deliveringCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="401" id="402">
@@ -278,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="412" style="IBUITableViewCellStyleSubtitle" textLabel="1491" detailTextLabel="1492">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="412" style="IBUITableViewCellStyleSubtitle" textLabel="1491" detailTextLabel="1492" reuseIdentifier="deliveredCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="412" id="413">
@@ -340,7 +340,11 @@
                     </view>
                     <connections>
                         <outlet property="deliveryMapView" destination="1433" id="name-outlet-1433"/>
+                        <outlet property="deliverBarButtonItem" destination="1954" id="name-outlet-1954"/>
                     </connections>
+                    <navigationItem title="Title" id="1951" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" title="Delivered" id="1954"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="421" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -371,7 +375,13 @@
                     </view>
                     <connections>
                         <outlet property="pickUpMapView" destination="1330" id="name-outlet-1330"/>
+                        <outlet property="pickUpBarButtonItem" destination="1956" id="name-outlet-1956"/>
                     </connections>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem title="Title" id="1955" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" title="Pick up" id="1956"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1328" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
