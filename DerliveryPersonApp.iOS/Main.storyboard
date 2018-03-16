@@ -330,6 +330,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1322" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="20" y="64" width="374" height="672"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3093" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="692" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Get directions" id="3094"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <constraints>
                             <constraint id="1433" firstItem="1322" firstAttribute="top" secondItem="416" secondAttribute="bottom"/>
@@ -341,8 +348,10 @@
                     <connections>
                         <outlet property="deliveryMapView" destination="1433" id="name-outlet-1433"/>
                         <outlet property="deliverBarButtonItem" destination="1954" id="name-outlet-1954"/>
+                        <outlet property="deliveringMapView" destination="1322" id="name-outlet-1322"/>
+                        <outlet property="navigateBarButtonItem" destination="3094" id="name-outlet-3094"/>
                     </connections>
-                    <navigationItem title="Title" id="1951" key="navigationItem">
+                    <navigationItem id="1951" key="navigationItem" title="Location to deliver">
                         <barButtonItem key="rightBarButtonItem" title="Delivered" id="1954"/>
                     </navigationItem>
                 </viewController>
@@ -365,6 +374,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="1330" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="20" y="64" width="374" height="672"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3091" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="692" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Get directions" id="3092"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <constraints>
                             <constraint id="1429" firstItem="1330" firstAttribute="leading" secondItem="1327" secondAttribute="leadingMargin"/>
@@ -376,10 +392,11 @@
                     <connections>
                         <outlet property="pickUpMapView" destination="1330" id="name-outlet-1330"/>
                         <outlet property="pickUpBarButtonItem" destination="1956" id="name-outlet-1956"/>
+                        <outlet property="navigateBarButtonItem" destination="3092" id="name-outlet-3092"/>
                     </connections>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationItem title="Title" id="1955" key="navigationItem">
+                    <navigationItem title="Location to pick up" id="1955" key="navigationItem">
                         <barButtonItem key="rightBarButtonItem" title="Pick up" id="1956"/>
                     </navigationItem>
                 </viewController>

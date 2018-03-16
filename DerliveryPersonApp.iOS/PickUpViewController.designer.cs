@@ -16,6 +16,10 @@ namespace DerliveryPersonApp.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem navigateBarButtonItem { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIBarButtonItem pickUpBarButtonItem { get; set; }
 
         [Outlet]
@@ -24,6 +28,11 @@ namespace DerliveryPersonApp.iOS
 
         void ReleaseDesignerOutlets ()
         {
+            if (navigateBarButtonItem != null) {
+                navigateBarButtonItem.Dispose ();
+                navigateBarButtonItem = null;
+            }
+
             if (pickUpBarButtonItem != null) {
                 pickUpBarButtonItem.Dispose ();
                 pickUpBarButtonItem = null;
