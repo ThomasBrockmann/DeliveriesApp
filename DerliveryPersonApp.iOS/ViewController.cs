@@ -8,7 +8,6 @@ namespace DerliveryPersonApp.iOS
 {
     public partial class ViewController : UIViewController
     {
-        bool loggedIn = false;
         string userId = string.Empty;
 
         public ViewController(IntPtr handle) : base(handle)

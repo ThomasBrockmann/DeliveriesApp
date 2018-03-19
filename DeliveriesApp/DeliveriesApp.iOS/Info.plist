@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>DeliveriesApp</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.DeliveriesApp</string>
+	<string>de.tbrockmann.deliveriesapp</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -43,7 +43,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<string>Resources/Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationWhenInUseageDescription</key>
 	<string>We need to acces your location to improve user experience</string>
 	<key>CFBundleDocumentTypes</key>
@@ -63,8 +63,8 @@
 		<string>MKDirectionsModeStreetcar</string>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>Delivery App</string>
-  <key>NSLocationWhenInUseUsageDescription</key>
-  <string>We need to access your location to improve user experience</string>
+	<string>Deliveries App</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to access your location to improve user experience</string>
 </dict>
 </plist>
