@@ -26,6 +26,7 @@ namespace DeliveriesApp.Droid
             ListAdapter = new DeliveryAdapter(Activity, deliveries);
         }
 
+
         //public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         //{
         //    // Use this to return your custom view for this Fragment
